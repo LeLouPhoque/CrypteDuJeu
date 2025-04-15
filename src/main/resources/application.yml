@@ -1,18 +1,16 @@
 spring:
   application:
     name: premierProjet
-#Connection to DB
-  datasource:
-    url: jdbc:sqlserver://localhost;databasename=DEMO_ENI_BD;integratedSecurity=false;encrypt=false;trustServerCertificate=false
-    username: sa
-    password: Pa$$w0rd
 
-  #Options to DB
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ludotheque
+    username: postgres
+
   jpa:
     show-sql: true
     properties:
       hibernate:
         format_sql: true
+        dialect: org.hibernate.dialect.SQLServerDialect
     hibernate:
       ddl-auto: create
-
