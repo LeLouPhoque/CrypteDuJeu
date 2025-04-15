@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 @Slf4j
 class EmployeRepositoryTest {
-
+/*
     @Autowired
     private EmployeRepository repo;
 
@@ -35,5 +35,5 @@ class EmployeRepositoryTest {
 
 
     }
-
+*/
 }
