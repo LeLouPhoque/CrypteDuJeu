@@ -22,12 +22,12 @@ public class AdresseRepositoryTest {
         adresse.setVille("Paris");
         adresse.setCodePostal("75000");
 
-        Adresse address = adresseRepository.save(adresse);
+        Adresse savedAdresse = adresseRepository.save(adresse);
 
-        assertThat(address).isNotNull();
-        assertThat(address.getId()).isNotNull();
-        assertThat(address.getRue()).isEqualTo("1 Rue Stique");
-        assertThat(address.getVille()).isEqualTo("Paris");
-        assertThat(address.getCodePostal()).isEqualTo("75000");
+        assertThat(savedAdresse).isNotNull();
+        assertThat(savedAdresse.getId()).isNotNull();
+        assertThat(savedAdresse.getRue()).isEqualTo("1 Rue Stique");
+        assertThat(savedAdresse.getVille()).isEqualTo("Paris");
+        assertThat(savedAdresse.getCodePostal()).isEqualTo("75000");
     }
 }
