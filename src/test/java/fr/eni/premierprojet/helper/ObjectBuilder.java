@@ -4,14 +4,12 @@ package fr.eni.premierprojet.helper;
 import fr.eni.premierprojet.bo.Exemplaire;
 import fr.eni.premierprojet.bo.Genre;
 import fr.eni.premierprojet.bo.Jeu;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
 import java.util.Set;
 
-@SpringBootTest
-@Slf4j
+@Component
 public class ObjectBuilder {
 
     public Set<Genre> genresBuild() {

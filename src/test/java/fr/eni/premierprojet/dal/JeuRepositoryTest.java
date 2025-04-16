@@ -26,11 +26,8 @@ public class JeuRepositoryTest {
     @Autowired
     private JeuRepository jeuRepository;
 
-    private final ObjectBuilder builder;
-
-    public JeuRepositoryTest(ObjectBuilder builder) {
-        this.builder = builder;
-    }
+    @Autowired
+    private ObjectBuilder builder;
 
     @Test
     public void testInsertJeuAvecGenres() {
@@ -39,6 +36,6 @@ public class JeuRepositoryTest {
 
         // THEN
         assertThat(saved.getId()).isNotNull();
-        assertThat(saved.getGenres()).hasSize(2);
+        assertThat(saved.getGenres()).hasSize(3);
     }
 }

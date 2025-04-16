@@ -12,11 +12,9 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @SpringBootTest
 @Slf4j
 class ExemplaireRepositoryTest {
-    private final ObjectBuilder builder;
 
-    ExemplaireRepositoryTest(ObjectBuilder builder) {
-        this.builder = builder;
-    }
+    @Autowired
+    ObjectBuilder builder;
 
     @Test
     public void testExemplairePersisted() {

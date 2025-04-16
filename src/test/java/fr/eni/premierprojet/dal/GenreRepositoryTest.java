@@ -16,11 +16,8 @@ public class GenreRepositoryTest {
     @Autowired
     private GenreRepository genreRepository;
 
-    private final ObjectBuilder builder;
-
-    public GenreRepositoryTest(ObjectBuilder builder) {
-        this.builder = builder;
-    }
+    @Autowired
+    private ObjectBuilder builder;
 
     @Test
     public void testInsertGenre() {
