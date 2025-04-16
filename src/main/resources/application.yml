@@ -7,10 +7,10 @@ spring:
     username: postgres
 
   jpa:
+    hibernate:
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
+        default_schema: public
         format_sql: true
-        dialect: org.hibernate.dialect.SQLServerDialect
-    hibernate:
-      ddl-auto: create

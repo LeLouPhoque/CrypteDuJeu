@@ -1,15 +1,14 @@
 package fr.eni.premierprojet.bo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Adresse {
@@ -17,7 +16,12 @@ public class Adresse {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(nullable = false)
     private String rue;
+
+    @Column(nullable = false)
     private String ville;
+
+    @Column(nullable = false)
     private String codePostal;
 }
