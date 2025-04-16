@@ -19,4 +19,12 @@ public interface ClientService {
     Client update(Long id, String nom, String prenom, String email, String telephone, Adresse adresse);
 
     Client update(Long id, String nom, String prenom, String email, String telephone, String rue, String ville, String codePostal);
+
+    Client updateAdresse(Client client, Adresse adresse);
+
+    Client updateAdresse(Long id, Adresse adresse);
+
+    Client updateAdresse(Client client, String rue, String ville, String codePostal);
+
+    Client updateAdresse(Long id, String rue, String ville, String codePostal);
 }

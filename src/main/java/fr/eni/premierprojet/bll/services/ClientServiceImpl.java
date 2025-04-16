@@ -68,4 +68,39 @@ public class ClientServiceImpl implements ClientService {
             throw new RuntimeException("Le client n'existe pas");
         }
     }
+
+    @Override
+    public Client updateAdresse(Client client, Adresse adresse) {
+        return updateAdresse(client.getId(), adresse);
+    }
+
+    @Override
+    public Client updateAdresse(Long id, Adresse adresse) {
+        return updateAdresse(id, adresse.getRue(), adresse.getVille(), adresse.getCodePostal());
+    }
+
+    @Override
+    public Client updateAdresse(Client client, String rue, String ville, String codePostal) {
+        return updateAdresse(client.getId(), rue, ville, codePostal);
+    }
+
+    @Override
+    public Client updateAdresse(Long id, String rue, String ville, String codePostal) {
+        Optional<Client> optionalClient = clientRepository.findById(id);
+
+        if (optionalClient.isPresent()) {
+            Client client = optionalClient.get();
+
+            Adresse adresse = client.getAdresse();
+            adresse.setRue(rue);
+            adresse.setVille(ville);
+            adresse.setCodePostal(codePostal);
+
+            client.setAdresse(adresse);
+
+            return clientRepository.save(client);
+        } else {
+            throw new RuntimeException("Le client n'existe pas");
+        }
+    }
 }
