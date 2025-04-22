@@ -12,4 +12,5 @@ public interface ClientService {
     Optional<Client> findByNom(String nom);
 
     List<Client> findAllByNom(String nom);
+
 }

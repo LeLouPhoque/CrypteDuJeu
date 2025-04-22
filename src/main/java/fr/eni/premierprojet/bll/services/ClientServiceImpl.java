@@ -32,4 +32,5 @@ public class ClientServiceImpl implements ClientService {
     public List<Client> findAllByNom(String nom) {
         return clientRepository.findByNom(nom);
     }
+
 }

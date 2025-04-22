@@ -22,19 +22,19 @@ public class Jeu {
     @Column(nullable = false)
     private String titre;
 
-    @Column(nullable = false)
+    @Column()
     private String reference;
 
-    @Column(nullable = false)
+    @Column()
     private int ageMin;
 
-    @Column(nullable = false)
+    @Column()
     private String description;
 
-    @Column(nullable = false)
+    @Column()
     private int dureeMoyenne;
 
-    @Column(nullable = false)
+    @Column()
     private double tarifJournalier;
 
     @ManyToMany
